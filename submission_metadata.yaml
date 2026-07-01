@@ -1,0 +1,83 @@
+# ============================================================================
+# Team identity
+# ============================================================================
+
+team_name: "Archi Mantri"
+
+primary_contact:
+  name: "Archi Mantri"
+  email: "archimantri22@gmail.com"
+  phone: "+91-8123253597"
+
+team_members:
+  - name: "Archi Mantri"
+    email: "archimantri22@gmail.com"
+    role: "Developer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+
+github_repo: "TODO_GITHUB_REPOSITORY"
+
+sandbox_link: "Not Applicable"
+
+reproduce_command: "python rank.py"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+
+compute:
+  platform: "Lenovo G50-80 laptop"
+  cpu_cores: 2
+  ram_gb: 8 GB
+  python_version: "3.13"
+  os: "Microsoft Windows 10 Pro"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+
+ai_tools_used:
+  - "ChatGPT" 
+  - "Claude"
+
+ai_usage_summary: |
+  ChatGPT was used for brainstorming the overall ranking approach, debugging
+  Python code, refining the scoring pipeline, improving reasoning generation,
+  and reviewing the overall implementation. Claude was additionally used for
+  code review, implementation suggestions, and discussing possible improvements
+  to the ranking strategy. No external APIs or large language models were used
+  during candidate ranking. The final ranking system runs completely offline
+  using Python and scikit-learn.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+
+methodology_summary: |
+  This project implements a hybrid candidate ranking system that combines
+  semantic similarity with heuristic scoring. The job description and candidate
+  career history are compared using TF-IDF vectorization and cosine similarity
+  to estimate semantic relevance. Additional scoring components evaluate years
+  of experience, current job title, technical skills, behavioural hiring
+  signals, retrieval-specific expertise, and profile consistency. Human-readable
+  reasoning is generated for every shortlisted candidate, providing recruiters
+  with transparent explanations for each recommendation. The complete pipeline
+  runs on CPU without requiring internet connectivity or external AI services.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
